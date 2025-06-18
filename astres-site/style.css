@@ -1,0 +1,159 @@
+/* 🎨 Couleurs principales */
+:root {
+  --bleu-nuit: #0a1f44;
+  --dore: #d4af37;
+  --blanc: #ffffff;
+  --gris-clair: #f5f5f5;
+}
+
+/* ✅ Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--blanc);
+  color: var(--bleu-nuit);
+  line-height: 1.6;
+}
+
+/* 🔝 Barre de navigation */
+nav {
+  background-color: var(--bleu-nuit);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  color: var(--dore);
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--blanc);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--dore);
+}
+
+/* 🧱 Sections générales */
+main.page-content {
+  padding-top: 120px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+p, ul, form {
+  margin-bottom: 20px;
+}
+
+/* 📋 Formulaires */
+form input, form textarea, form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--bleu-nuit);
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: var(--dore);
+  color: var(--bleu-nuit);
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #c9a32d;
+}
+
+/* 🖼️ Projets & blog */
+.project-gallery,
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.project-card,
+.blog-card {
+  background-color: var(--gris-clair);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-card img,
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card div,
+.blog-card div {
+  padding: 15px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--bleu-nuit);
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* 🔻 Pied de page */
+footer.footer {
+  background-color: var(--bleu-nuit);
+  color: var(--blanc);
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
